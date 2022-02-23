@@ -28,7 +28,7 @@ public class CarDao implements ServiceInterfce {
             if (id <=5) {
                 carsList1.add(carsList.get(i));
             } else {
-                System.out.println(carsList);
+                return carsList;
             }
         }
         return carsList1;

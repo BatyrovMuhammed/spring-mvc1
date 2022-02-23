@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, th, td {
+        border: 3px solid azure;
+        color: black;
+        width: 100px;
+        border-block-color: darkblue;
+    }
+</style>
+<body>
+<!--<div th:each="car : ${car}">-->
+<!--    <a th:href th:text="${car}">user</a>-->
+<table>
+    <tr>
+        <th> Id </th>
+        <th> Name </th>
+        <th> Year </th>
+        <th> Mark </th>
+    </tr>
+    <div th:each="car : ${cars}">
+        <tr>
+            <td>
+                <p th:text="${car.id}"></p>
+            </td>
+            <td>
+                <p th:text="${car.carName}"></p>
+            </td>
+            <td>
+                <p th:text="${car.whatYear}"></p>
+            </td>
+            <td>
+                <p th:text="${car.mark}"></p>
+            </td>
+        </tr>
+    </div>
+</table>
+</body>
+</html>
